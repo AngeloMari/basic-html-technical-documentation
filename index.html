@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>HTML Basics</title>
+  </head>
+  <body>
+    <div id="page-container">
+      <input type="checkbox" id="menu-toggle" hidden>
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div id="mobile-nav">
+        <h1 id="mobile-title">HTML Basics &lt; / &gt;</h1>
+      </div>
+      <div id="mobile-menu">
+        <ul>
+          <li><a class="nav-link-mobile" href="#introduction_to_html">Introduction to HTML</a></li>
+          <li><a class="nav-link-mobile" href="#common_html_tags">Common HTML Tags</a></li>
+          <li><a class="nav-link-mobile" href="#forms_and_input_elements">Forms and Input Elements</a></li>
+          <li><a class="nav-link-mobile" href="#semantic_html_elements">Semantic HTML Elements</a></li>
+          <li><a class="nav-link-mobile" href="#html_best_practices">HTML Best Practices</a></li>
+          <li><a class="nav-link-mobile" href="#references">References</a></li>
+        </ul>
+      </div>
+      <main id="main-doc">
+        <section class="main-section" id="introduction_to_html">
+          <header><h2 class="chapters">Introduction to HTML</h2></header>
+          <p>HTML stands for <strong>HyperText Markup Language</strong>. It is the fundamental language used to create and structure content on the web. HTML uses <em>tags</em> (also called elements) to define parts of a webpage such as headings, paragraphs, links, lists, and more.</p>
+          <h3 class="subtopic">What is Markup?</h3>
+          <p>"Markup" means that you are marking up the content to give it structure and meaning. For example, wrapping a sentence with &lt;p&gt; tells the browser: "This is a paragraph."</p>
+          <h3 class="subtopic">What is a Web Page Made of?</h3>
+          <p>A basic HTML document includes:</p>
+          <ul>
+            <li>A doctype declaration (&lt;!DOCTYPE html&gt;) which tells the browser to use the latest HTML standard.</li>
+            <li>A root &lt;html&gt; element that contains everything.</li>
+            <li>A &lt;head&gt; section with metadata, title, and links to styles or scripts.</li>
+            <li>A &lt;body&gt; section with the visible content of the page.</li>
+          </ul>
+          <h4 class="examples">Example:</h4>
+          <pre><code><span class="tags">&lt;!DOCTYPE</span> <span class="attributes">html</span><span class="tags">&gt;</span>
+    <span class="tags">&lt;html&gt;</span>
+        <span class="tags">&lt;head&gt;</span>
+            <span class="tags">&lt;title&gt;</span><span class="content">My First Webpage</span><span class="tags">&lt;/title&gt;</span>
+        <span class="tags">&lt;/head&gt;</span>
+        <span class="tags">&lt;body&gt;</span>
+            <span class="tags">&lt;h1&gt;</span><span class="content">Welcome to My Website</span><span class="tags">&lt;/h1&gt;</span>
+            <span class="tags">&lt;p&gt;</span><span class="content">This is a simple HTML document.</span><span class="tags">&lt;/p&gt;</span>
+        <span class="tags">&lt;/body&gt;</span>
+  <span class="tags">&lt;/html&gt;</span></code></pre>
+        </section>
+        <section class="main-section" id="common_html_tags">
+          <header><h2 class="chapters">Common HTML Tags</h2></header>
+          <p>HTML tags are the building blocks of your webpage. Most tags come in pairs: an opening tag like &lt;p&gt; and a closing tag like &lt;/p&gt;. Tags that don't require closing tags are called void elements.</p>
+          <table>
+            <caption><h4 class="examples">Some essential tags:</h4></caption>
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tags">&lt;h1&gt;&lt;/h1&gt;</span> to <span class="tags">&lt;h6&gt;&lt;/h6&gt;</span></td>
+                <td>Headings (from most important to least)</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;p&gt;&lt;/p&gt;</span></td>
+                <td>Paragraph of text</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;a</span> <span class="attributes">href=</span><span class="value">&quot;&quot;</span><span class="tags">&gt;&lt;/a&gt;</span></td>
+                <td>Anchor tag for links</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;img</span> <span class="attributes">src=</span><span class="value">&quot;&quot;</span><span class="tags">&gt;</span></td>
+                <td>Displays an image</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;ul&gt;&lt;/ul&gt;</span> and <span class="tags">&lt;ol&gt;&lt;/ol&gt;</span></td>
+                <td>Unordered and Ordered lists</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;li&gt;&lt;/li&gt;</span></td>
+                <td>List item</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;br&gt;</span></td>
+                <td>Line break</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;hr&gt;&lt;/hr&gt;</span></td>
+                <td>Horizontal line (divider)</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;strong&gt;&lt;/strong&gt;</span> and <span class="tags">&lt;em&gt;&lt;/em&gt;</span></td>
+                <td>Bold and italic for emphasis</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 class="examples">Example:</h4>
+          <pre><code><span class="tags">&lt;h2&gt;</span><span class="content">Learning HTML</span><span class="tags">&lt;/h2&gt;<span>
+<span class="tags">&lt;p&gt;</span><span class="content">This is a paragraph with a</span> <span class="tags">&lt;strong&gt;</span><span class="content">bold</span><span class="tags">&lt;/strong&gt;<span> <span class="content">word.</span><span class="tags">&lt;/p&gt;<span>
+<span class="tags">&lt;a</span> <span class="attribute">href=<span class="value">&quot;https://developer.mozilla.org&quot;</span>&gt;<span class="content">Visit MDN</span>&lt;/a&gt;</span>
+<span class="tags">&lt;img <span class="attributes">src=</span><span class="value">&quot;html-logo.png&quot;</span> <span class="attributes">alt=</span><span class="value">&quot;HTML5 Logo&quot;</span>&gt;</span></code></pre>
+        </section>
+        <section class="main-section" id="forms_and_input_elements">
+          <header><h2 class="chapters">Forms and Input Elements</h2></header>
+          <p>HTML forms allow users to input data, such as filling out a contact form or logging into a site.</p>
+          <h4 class="examples">Basic Form Structure:</h4>
+          <pre><code><span class="tags">&lt;form</span> <span class="attributes">action=</span><span class="value">&quot;/submit&quot;</span> <span class="attributes">method=</span><span class="value">&quot;POST&quot;</span><span class="tags">&gt;</span>
+    <span class="tags">&lt;!--</span><span class="content"> input elements go here </span><span class="tags">--&gt;</span>
+<span class="tags">&lt;/form&gt;</span></code></pre>
+          <ul class="example-caption">
+            <li><strong>action:</strong> URL where the form data will be sent</li>
+            <li><strong>method:</strong> usually &quot;GET&quot; or &quot;POST&quot;</li>
+          </ul>
+          <table>
+            <caption><h4 class="examples">Common Form Elements:</h4></caption>
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tags">&lt;input</span> <span class="attributes">type=</span><span class="value">&quot;text&quot;</span><span class="tags">&gt;</span></td>
+                <td>Single-line text input</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;input</span> <span class="attributes">type=</span><span class="value">&quot;email&quot;</span><span class="tags">&gt;</span></td>
+                <td>Email input with built-in validation</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;input</span> <span class="attributes">type=</span><span class="value">&quot;password&quot;</span><span class="tags">&gt;</span></td>
+                <td>Hidden password field</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;textarea&gt;</span></td>
+                <td>Multi-line input</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;select&gt;</span> + <span class="tags">&lt;option&gt;</span></td>
+                <td>Dropdown menu</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;input</span> <span class="attributes">type=</span><span class="value">&quot;submit&quot;</span><span class="tags">&gt;</span></td>
+                <td>Button to submit the form</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 class="examples">Example:</h4>
+          <pre><code><span class="tags">&lt;form&gt;</span>
+    <span class="tags">&lt;label</span> <span class="attributes">for=</span><span class="value">&quot;username&quot;</span><span class="tags">&gt;</span><span class="content">Username:</span><span class="tags">&lt;/label&gt;</span><span class="tags">&lt;br&gt;</span>
+    <span class="tags">&lt;input</span> <span class="attributes">type=</span><span class="value">&quot;text&quot;</span> <span class="attributes">id=</span><span class="value">&quot;username&quot;</span> <span class="attributes">name=</span><span class="value">&quot;username&quot;</span><span class="tags">&gt;</span><span class="tags">&lt;br&gt;&lt;br&gt;</span>
+
+    <span class="tags">&lt;label</span> <span class="attributes">for=</span><span class="value">&quot;email&quot;</span><span class="tags">&gt;</span><span class="content">Email:</span><span class="tags">&lt;/label&gt;</span><span class="tags">&lt;br&gt;</span>
+    <span class="tags">&lt;input</span> <span class="attributes">type=</span><span class="value">&quot;email&quot;</span> <span class="attributes">id=</span><span class="value">&quot;email&quot;</span> <span class="attributes">name=</span><span class="value">&quot;email&quot;</span><span class="tags">&gt;</span><span class="tags">&lt;br&gt;&lt;br&gt;</span>
+
+    <span class="tags">&lt;label</span> <span class="attributes">for=</span><span class="value">&quot;message&quot;</span><span class="tags">&gt;</span><span class="content">Message:</span><span class="tags">&lt;/label&gt;</span><span class="tags">&lt;br&gt;</span>
+    <span class="tags">&lt;textarea</span> <span class="attributes">id=</span><span class="value">&quot;message&quot;</span> <span class="attributes">name=</span><span class="value">&quot;message&quot;</span> <span class="attributes">rows=</span><span class="value">&quot;4&quot;</span> <span class="attributes">cols=</span><span class="value">&quot;30&quot;</span><span class="tags">&gt;&lt;/textarea&gt;</span><span class="tags">&lt;br&gt;&lt;br&gt;</span>
+    
+  <span class="tags">&lt;input</span> <span class="attributes">type=</span><span class="value">&quot;submit&quot;</span> <span class="attributes">value=</span><span class="value">&quot;Send&quot;</span><span class="tags">&gt;</span>
+<span class="tags">&lt;/form&gt;</span></code></pre>
+        </section>
+        <section class="main-section" id="semantic_html_elements">
+          <header><h2 class="chapters">Semantic HTML Elements</h2></header>
+          <p>Semantic HTML refers to elements that clearly describe their meaning in a human- and machine-readable way. Instead of using generic &lt;div&gt;s everywhere, semantic tags improve the structure and accessibility of your page.</p>
+          <table>
+            <caption><h4 class="examples">Common Semantic Tags:</h4></caption>
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tags">&lt;header&gt;</span></td>
+                <td>Intro or navigation for a section or page</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;nav&gt;</span></td>
+                <td>Navigation menus</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;main&gt;</span></td>
+                <td>Main content of the page</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;section&gt;</span></td>
+                <td>Thematic grouping of content</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;article&gt;</span></td>
+                <td>Self-contained content (e.g. blog post)</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;aside&gt;</span></td>
+                <td>Side content (e.g. ads, tips)</td>
+              </tr>
+              <tr>
+                <td><span class="tags">&lt;footer&gt;</span></td>
+                <td>Footer content</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 class="examples">Example:</h4>
+          <pre><code><span class="tags">&lt;main&gt;</span>
+    <span class="tags">&lt;article&gt;</span>
+        <span class="tags">&lt;header&gt;</span>
+            <span class="tags">&lt;h2&gt;</span><span class="content">Why Semantic HTML Matters</span><span class="tags">&lt;/h2&gt;</span>
+        <span class="tags">&lt;/header&gt;</span>
+        <span class="tags">&lt;p&gt;</span><span class="content">It improves accessibility, SEO, and code clarity.</span><span class="tags">&lt;/p&gt;</span>
+        <span class="tags">&lt;footer&gt;</span><span class="content">Written by John</span><span class="tags">&lt;/footer&gt;</span>
+    <span class="tags">&lt;/article&gt;</span>
+<span class="tags">&lt;/main&gt;</span></code></pre>
+          <p class="example-caption">Using semantic elements makes your code easier to maintain and more meaningful to users and search engines.</p>
+        </section>
+        <section class="main-section" id="html_best_practices">
+          <header><h2 class="chapters">HTML Best Practices</h2></header>
+          <p>Writing good HTML means not just making a page work, but also making it clean, readable, and future-proof.</p>
+          <p>General Guidelines:</p>
+          <ul>
+            <li>Use semantic elements instead of too many &lt;div&gt;s.</li>
+            <li>Indent your code consistently.</li>
+            <li>Use lowercase for tag names and attributes.</li>
+            <li>Always close your tags, even if they&apos;re optional.</li>
+            <li>Add alt attributes to images for accessibility.</li>
+            <li>Avoid inline styling; use CSS instead.</li>
+            <li>Test your HTML in different browsers.</li>
+          </ul>
+          <h4 class="examples">Examples:</h4>
+          <h5>Bad:</h5>
+          <pre><code><span class="tags">&lt;DIV&gt;</span><span class="tags">&lt;P</span> <span class="attributes">style=</span><span class="value">&quot;color:blue&quot;</span><span class="tags">&gt;</span><span class="content">text</span><span class="tags">&lt;/P&gt;</span><span class="tags">&lt;/DIV&gt;</span></code></pre>
+          <h5>Good:</h5>
+          <pre><code><span class="tags">&lt;div&gt;</span>
+    <span class="tags">&lt;p</span> <span class="attributes">class=</span><span class="value">&quot;blue-text&quot;</span><span class="tags">&gt;</span><span class="content">text</span><span class="tags">&lt;/p&gt;</span>
+<span class="tags">&lt;/div&gt;</span></code></pre>
+          <h5>Accessibility:</h5>
+          <pre><code><span class="tags">&lt;img</span> <span class="attributes">src=</span><span class="value">&quot;form.jpg&quot;</span> <span class="attributes">alt=</span><span class="value">&quot;Filling out a form on a laptop&quot;</span><span class="tags">&gt;</span></code></pre>
+          <p class="example-caption">This helps users with screen readers know what the image is about.</p>
+        </section>
+        <section class="main-section" id="references">
+          <header><h2 class="chapters">References</h2></header>
+          <p>For detailed readings, check out the following:</p>
+          <ol>
+            <li><a href="https://html.com/" target="_blank">HTML.com &ndash; Beginner's Guide</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN Web Docs &ndash; HTML</a></li>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools &ndash; HTML Tutorial</a></li>
+            <li><a href="https://web.dev/learn/html/" target="_blank">Web.dev &ndash; Learn HTML</a></li>
+          </ol>
+        </section>
+      </main>
+      <div id="desktop-nav">
+        <nav id="navbar">
+          <header>
+            <h1 class="desktop-title">HTML Basics</h1>
+            <h1 class="desktop-title">&lt; / &gt;</h1>
+          </header>
+          <ul>
+            <li><a class="nav-link" href="#introduction_to_html">Introduction to HTML</a></li>
+            <li><a class="nav-link" href="#common_html_tags">Common HTML Tags</a></li>
+            <li><a class="nav-link" href="#forms_and_input_elements">Forms and Input Elements</a></li>
+            <li><a class="nav-link" href="#semantic_html_elements">Semantic HTML Elements</a></li>
+            <li><a class="nav-link" href="#html_best_practices">HTML Best Practices</a></li>
+            <li><a class="nav-link" href="#references">References</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
