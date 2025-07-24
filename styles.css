@@ -48,10 +48,6 @@ body {
   padding: 3% 5%;
   overflow-x: hidden;
 }
-#mobile-title {
-  padding-top: 4px;
-  font-size: 1.5rem;
-}
 .chapters {
   font-size: 1.3rem;
 }
@@ -177,10 +173,15 @@ ol a:hover {
 #mobile-nav {
   position: sticky;
   top: 0;
-  height: 12vh;
+  display: flex;
+  align-items: center;
+  height: 8vh;
   padding-left: 5%;
   background-color: var(--blue);
   color: var(--white);
+}
+#mobile-title {
+  font-size: 1.5rem;
 }
 .hamburger {
   display: inline-block;
@@ -188,8 +189,9 @@ ol a:hover {
   width: 30px;
   height: 25px;
   position: fixed;
-  top: 3vh;
+  top: 4%;
   right: 4%;
+  transform: translateY(-50%);
   z-index: 2;
 }
 .hamburger span {
@@ -218,17 +220,15 @@ ol a:hover {
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
   position: fixed;
-  top: 12vh;
+  top: 8vh;
   right: 0;
   background-color: var(--white2);
   z-index: 1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 #menu-toggle:checked ~ #mobile-menu {
   max-height: 400px;
 }
-
 #mobile-menu ul {
   margin: 0;
   padding: 0;
